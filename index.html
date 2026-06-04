@@ -5,92 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soumyajit Mukherjee | Portfolio</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #0b111e;
+            color: #e2e8f0;
+            padding-bottom: 60px;
         }
+        
+        /* Modern React Gradient Header */
         header {
-            background: linear-gradient(135deg, #0066ff, #00c6ff);
-            color: white;
-            padding: 80px 20px;
+            background: radial-gradient(circle at top right, rgba(0, 198, 255, 0.15), transparent), 
+                        linear-gradient(180deg, #0f172a, #0b111e);
+            padding: 80px 20px 60px 20px;
             text-align: center;
+            border-bottom: 1px solid #1e293b;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00c6ff, transparent);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
-            margin-top: 10px;
+            color: #38bdf8;
+            margin-top: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
+
+        /* Profile Image */
         .profile-img-div {
             text-align: center;
-            margin-top: -60px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
         }
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 5px solid white;
+            border: 3px solid #00c6ff;
             object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+            background-color: #0f172a;
         }
+
         .container {
             padding: 20px;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
+
+        /* React-Inspired Tech Cards */
         .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #1e293b;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            border-color: #38bdf8;
         }
         .card h2 {
-            color: #0066ff;
+            color: #38bdf8;
             margin-top: 0;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.2), transparent);
         }
         .card p {
-            line-height: 1.6;
-            color: #555;
-        }
-        .skill-badge {
-            display: inline-block;
-            background-color: #0066ff;
-            color: white;
-            padding: 80px 15px; /* আপনার আগের দেওয়া প্যাডিং স্টাইল */
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 5px;
-            font-weight: bold;
-        }
-        .contact-link {
-            display: block;
-            color: #333;
-            text-decoration: none;
-            margin-bottom: 10px;
+            line-height: 1.7;
+            color: #94a3b8;
             font-size: 1rem;
         }
+
+        /* Modern Skill Badges */
+        .skill-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.06);
+            color: #38bdf8;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin: 6px;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        /* Lists */
+        .card ul {
+            padding-left: 20px;
+            color: #94a3b8;
+            line-height: 1.9;
+        }
+        .card ul li::marker {
+            color: #38bdf8;
+        }
+
+        /* Custom Separator Line */
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1e293b, transparent);
+            margin: 25px 0;
+        }
+
+        /* Modern Contact Links */
+        .contact-link {
+            display: flex;
+            align-items: center;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 14px;
+            font-size: 1rem;
+            padding: 12px;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
         .contact-link:hover {
-            color: #0066ff;
+            color: #fff;
+            border-color: #38bdf8;
+            background: rgba(30, 41, 59, 0.8);
         }
         .contact-link strong {
-            color: #0066ff;
+            color: #38bdf8;
+            margin-right: 8px;
+            min-width: 90px;
         }
-        footer {
-            background-color: #222;
+
+        /* Modern Input Fields */
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus {
+            border-color: #38bdf8;
+        }
+        
+        /* Modern Gradient Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #00c6ff, #0066ff);
+            border: none;
+            border-radius: 12px;
             color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.25);
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            margin-top: 40px;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #475569;
+            border-top: 1px solid #1e293b;
+            background-color: #0f172a;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -98,11 +225,10 @@
 
     <header>
         <h1>Soumyajit Mukherjee</h1>
-        <p>BCA Student | Python Learner | Life Developer</p>
+        <p>BCA Student / Python Developer / Tech Enthusiast</p>
     </header>
 
     <div class="profile-img-div">
-        <!-- আপনার আপলোড করা ইমেজ ফাইলনেম -->
         <img class="profile-img" src="IMG-20260503-WA0013.jpg" alt="Soumyajit Mukherjee">
     </div>
 
@@ -112,110 +238,101 @@
         <div class="card">
             <h2>About Me</h2>
             <p>Hello! I am Soumyajit Mukherjee from Karimpur, West Bengal, India.</p>
-            <p>Currently pursuing BCA at Global College of Science and Technology. I enjoy learning Python, building websites, and exploring technology. My goal is to become a successful software developer.</p>
+            <p>Currently pursuing BCA at Global College of Science and Technology. I am deeply passionate about Python programming, modern web technologies, and software development. My goal is to craft impactful digital solutions.</p>
         </div>
 
         <!-- Education Card -->
         <div class="card">
             <h2>Education</h2>
-             <!-- আপনার দেওয়া লিঙ্কের ছবি যোগ করার কোড -->
-    <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-            <p><strong>BCA (2023–2027)</strong></p>
-            <p style="margin: 0;">Global College of Science and Technology</p>
-        </div>
-           <!-- স্কুলের তথ্য এবং ছবি -->
-                    
             
+            <!-- College Section -->
+            <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.9; border: 1px solid #1e293b;">
+            <p style="margin-top: 5px;"><strong>BCA (2023–2027)</strong></p>
+            <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Global College of Science and Technology</p>
+            
+            <hr class="section-divider">
+            
+            <!-- School Section -->
             <p><strong>Secondary & Higher Secondary (Class 5–12)</strong></p>
-            <img src="Unnamed.webp" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 10px; margin: 10px 0;">
-            <p style="margin: 0;">Karimpur Jagannath High School</p>
-                    </div>
-        
+            <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.9; border: 1px solid #1e293b;">
+            <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Karimpur Jagannath High School</p>
+        </div>
 
         <!-- Skills Card -->
         <div class="card">
             <h2>Skills</h2>
             <span class="skill-badge">Python</span>
-            <span class="skill-badge">HTML</span>
-            <span class="skill-badge">CSS</span>
-            <span class="skill-badge">Web Development</span>
             <span class="skill-badge">Java</span>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">Web Development</span>
+            <span class="skill-badge">Git & GitHub</span>
         </div>
 
         <!-- Projects Card -->
         <div class="card">
             <h2>Projects</h2>
-            <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
-                <li>Personal Portfolio Website</li>
-                <li>Shoe Shop Website</li>
-                <li>Python Mini Projects</li>
+            <ul>
+                <li><strong>Personal Portfolio Website</strong> - A modern tech portfolio built with responsive HTML & CSS.</li>
+                <li><strong>Shoe Shop Website</strong> - An interactive web layout for an e-commerce platform.</li>
+                <li><strong>Python Mini Projects</strong> - A collection of automation and utility scripts.</li>
             </ul>
         </div>
 
-        <!-- My Vision Card -->
-             <!-- Message Me Form Card -->
-        <div class="card" style="background-color: #0b1528; color: #fff; border-radius: 15px; padding: 30px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-            <h2 style="color: #00c6ff; text-align: left; margin-top: 0; margin-bottom: 5px; font-size: 1.8rem;">Message Me</h2>
+        <!-- Vision Card -->
+        <div class="card">
+            <h2>My Vision</h2>
+            <p>To master software engineering frameworks and build high-performance web applications that add immense value to the global developer community.</p>
+        </div>
+
+        <!-- Contact Info Card -->
+        <div class="card">
+            <h2>Connect</h2>
+            
+            <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
+                <strong>Instagram</strong> @itz_soumyajit_2005 ↗
+            </a>
+            
+            <a class="contact-link" href="https://www.facebook.com/share/18SCDVYxc4/" target="_blank">
+                <strong>Facebook</strong> Soumyajit Mukherjee ↗
+            </a>
+
+            <a class="contact-link" href="mailto:your-soumyajitm014@gmail.com">
+                <strong>Email</strong> your-soumyajitm014@gmail.com ✉
+            </a>
+            <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #64748b;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
+        </div>
+
+        <!-- Message Me Contact Form -->
+        <div class="card" style="background: rgba(15, 23, 42, 0.8); border-color: #1e293b;">
+            <h2 style="color: #38bdf8; margin-bottom: 5px;">Message Me</h2>
             <p style="color: #64748b; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
             
-            <!-- ফর্ম শুরু (Formspree আইডিটি পরে বসিয়ে নেবেন) -->
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                
-                <!-- নাম ইনপুট -->
-                <div style="margin-bottom: 15px;">
-                    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 16px; background-color: #121e36; border: 1px solid #1e293b; border-radius: 12px; color: #fff; box-sizing: border-box; font-size: 1rem; outline: none;">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
                 </div>
-
-                <!-- ইমেইল ইনপুট -->
-                <div style="margin-bottom: 15px;">
-                    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 16px; background-color: #121e36; border: 1px solid #1e293b; border-radius: 12px; color: #fff; box-sizing: border-box; font-size: 1rem; outline: none;">
+                <div class="form-group">
+                    <input type="email" name="email" class="form-input" placeholder="Your Email" required>
                 </div>
-
-                <!-- সাবজেক্ট ইনপুট -->
-                <div style="margin-bottom: 15px;">
-                    <input type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 16px; background-color: #121e36; border: 1px solid #1e293b; border-radius: 12px; color: #fff; box-sizing: border-box; font-size: 1rem; outline: none;">
+                <div class="form-group">
+                    <input type="text" name="subject" class="form-input" placeholder="Subject" required>
                 </div>
-
-                <!-- মেসেজ টেক্সট-এরিয়া -->
-                <div style="margin-bottom: 20px;">
-                    <textarea name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 16px; background-color: #121e36; border: 1px solid #1e293b; border-radius: 12px; color: #fff; box-sizing: border-box; font-size: 1rem; resize: none; outline: none;"></textarea>
+                <div class="form-group">
+                    <textarea name="message" rows="5" class="form-input" placeholder="Your Message" style="resize: none;" required></textarea>
                 </div>
-
-                <!-- সাবমিট বাটন পেপারের প্লেন বা তীরের আইকনসহ -->
-                <button type="submit" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #00c6ff, #0066ff); border: none; border-radius: 12px; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,198,255,0.3);">
-                    Send Message <span> can-send-icon ✈ </span>
+                <button type="submit" class="submit-btn">
+                    Send Message ✈
                 </button>
-            
             </form>
-        </div>
-    
-    
-        
-    
-
-        <!-- Contact Card (এক ক্লিকেই ওপেন হওয়ার লিংকসহ) -->
-        <div class="card">
-            <h2>Contact</h2>
-            <!-- ইনস্টাগ্রাম ডিরেক্ট লিংক -->
-            <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
-                <strong>Instagram:</strong> @itz_soumyajit_2005 ↗️
-            </a>
-            <!-- ফেসবুক ডিরেক্ট লিংক -->
-            <a class="contact-link" href="https://www.facebook.com/share/18SCDVYxc4/" target="_blank">
-                <strong>Facebook:</strong> Soumyajit Mukherjee 🔵
-            </a>
-            <!-- ইমেইল ডিরেক্ট লিংক -->
-            <a class="contact-link" href="mailto:your-soumyajitm014@gmail.com">
-                <strong>Email:</strong> your-soumyajitm014@gmail.com ✉️
-            </a>
-            <p style="margin: 10px 0 0 0;"><strong>Location:</strong> Karimpur, West Bengal, India</p>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 Soumyajit Mukherjee | All Rights Reserved
+        &copy; 2026 Soumyajit Mukherjee | Designed with Modern Tech Inspirations
     </footer>
 
 </body>
 </html>
+
