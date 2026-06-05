@@ -236,9 +236,10 @@
             gap: 10px;
             box-shadow: 0 4px 20px rgba(0, 198, 255, 0.25);
         }
-        .submit-btn:hover {
-            opacity: 0.95;
-        }
+
+        /* Game Styles */
+        canvas { background: #000; border: 2px solid #38bdf8; display: block; margin: 15px auto; border-radius: 8px; }
+        .game-btn { background: #38bdf8; color: #000; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1rem; }
 
         footer {
             text-align: center;
@@ -253,13 +254,12 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar with working Hamburger Menu -->
     <nav>
         <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 5px;">
             <span style="color: #38bdf8;">&lt;/&gt;</span> soumyajit
         </div>
         
-        <!-- Toggle Button for Menu -->
         <button onclick="toggleMenu()" style="background: rgba(30, 41, 59, 0.6); border: 1px solid #1e293b; border-radius: 10px; width: 45px; height: 45px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; cursor: pointer; outline: none;">
             <span style="width: 20px; height: 2px; background-color: #94a3b8; display: block; border-radius: 2px;"></span>
             <span style="width: 20px; height: 2px; background-color: #94a3b8; display: block; border-radius: 2px;"></span>
@@ -274,6 +274,7 @@
         <a href="#experience" onclick="toggleMenu()">Experience</a>
         <a href="#skills" onclick="toggleMenu()">Skills</a>
         <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#game" onclick="toggleMenu()">Snake Game 🐍</a>
         <a href="#contact" onclick="toggleMenu()">Message Me</a>
     </div>
 
@@ -303,7 +304,7 @@
             <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Global College of Science and Technology</p>
             <hr class="section-divider">
             <p><strong>Secondary & Higher Secondary (Class 5–12)</strong></p>
-            <img src="https://www.google.com/search?client=ms-android-realme-terr1-rso2&hs=IH1p&sca_esv=f21729c6c462f6e2&sxsrf=ANbL-n5KY6XHACbr3XzjC_qMVB1-6WxRkw:1780643498927&udm=2&fbs=ADc_l-ZPaWS6Cwvagqs-zNwTknOxoCgbwliwsizr93tHuHtS_25iUDD1dAe32cVYoVuCZdaICEDzoV7b8nMWhR3UyFE5QjS2uwpA_3JAu1erxrrUek8I2T10tEIuo1ql8VWmKXMEBvkHfvMv5g7xDOtomov33-rOA_bAJmCO9hZQ_yO3lPXAIHeeoXTwLqf7Y2eOXhXNmyT-N7E2F8vqlxoM0kPio4OBIL_kFWzfhnc8ajxY7xWGKJ0AwwPC_Br9YA_v6jE3msxEEWmRZ9YsZhrYrZRyoZ8Oxw&q=Karimpur+Jagannath+High+School+(H.S.)&sa=X&sqi=2&ved=2ahUKEwjyqeb5xe-UAxUJd2wGHX8sBnkQtKgLegQIDxAB&biw=360&bih=666&dpr=3#sv=CAMSVxoyKhBlLXZuSGNaTXdxRHoyZ0FNMg52bkhjWk13cUR6MmdBTToOUllzVjQ4cndsdXNOY00gBCoXCgFzEhBlLXZuSGNaTXdxRHoyZ0FNGAEwAUoECAEQAhgHIOiIl8cOSggQAhgBIAIoAQ" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.9; border: 1px solid #1e293b;">
+            <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.9; border: 1px solid #1e293b;">
             <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Karimpur Jagannath High School</p>
         </div>
 
@@ -364,19 +365,20 @@
                 <li><strong>Python Mini Projects</strong> - A collection of automation and utility scripts.</li>
             </ul>
         </div>
-                <!-- Snake Game Card -->
-        <div id="game" class="card">
+
+        <!-- Playable Snake Game Card -->
+        <div id="game" class="card" style="border-color: #00ff9d;">
             <h2 style="color: #00ff9d;">Snake Game 🐍</h2>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Play a quick game directly on my portfolio!</p>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin-top: 0; margin-bottom: 10px;">Play a quick game directly on my portfolio!</p>
             
-            <!-- গেম এরিয়া -->
-            <canvas id="gameCanvas" width="300" height="300" style="background: #000; border-radius: 8px; display: block; margin: 0 auto; border: 2px solid #38bdf8;"></canvas>
+            <canvas id="gameCanvas" width="300" height="300"></canvas>
+            <p id="scoreText" style="font-size: 1.2rem; font-weight: bold; color: #38bdf8; margin: 5px 0;">Score: 0</p>
             
-            <div style="text-align: center; margin-top: 15px;">
-                <button onclick="startGame()" style="background: #38bdf8; color: #000; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer;">Start Game</button>
-            </div>
+            <button class="game-btn" onclick="resetGame()">Start / Restart</button>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 15px; line-height: 1.4;">
+                <strong>How to play on phone:</strong> Simply tap inside the black game box to turn the snake clockwise!
+            </p>
         </div>
-        
 
         <!-- Vision Card -->
         <div class="card">
@@ -429,8 +431,9 @@
         &copy; 2026 Soumyajit Mukherjee | Designed with Modern Tech Inspirations
     </footer>
 
-    <!-- JavaScript code for smooth working hamburger menu -->
+    <!-- All Logic Scripts (Menu & Game) -->
     <script>
+        // Hamburger Menu Logic
         function toggleMenu() {
             var menu = document.getElementById("mobile-menu");
             if (menu.style.display === "block") {
@@ -439,30 +442,58 @@
                 menu.style.display = "block";
             }
         }
-    </script>
-        <script>
+
+        // Snake Game Logic
         const canvas = document.getElementById("gameCanvas");
         const ctx = canvas.getContext("2d");
-        let snake = [{x: 150, y: 150}];
-        let food = {x: 100, y: 100};
-        let dx = 10, dy = 0;
+        const scoreText = document.getElementById("scoreText");
+        let snake = [{x: 10, y: 10}];
+        let food = {x: 15, y: 15};
+        let dx = 1, dy = 0, score = 0, gameInterval;
 
-        function startGame() {
-            setInterval(function() {
-                // গেম লজিক এখানে হবে (এটি একটি বেসিক ফ্রেম)
-                ctx.fillStyle = "black";
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                
-                // সাপ এবং খাবারের ডিজাইন...
-                ctx.fillStyle = "lime";
-                snake.forEach(part => ctx.fillRect(part.x, part.y, 10, 10));
-                
-                ctx.fillStyle = "red";
-                ctx.fillRect(food.x, food.y, 10, 10);
-            }, 100);
+        function draw() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, 300, 300);
+
+            // Draw Food
+            ctx.fillStyle = "red";
+            ctx.fillRect(food.x * 15, food.y * 15, 13, 13);
+
+            // Move Snake Head
+            let head = {x: snake[0].x + dx, y: snake[0].y + dy};
+            snake.unshift(head);
+
+            // If eat food
+            if(head.x === food.x && head.y === food.y) {
+                score++;
+                scoreText.innerText = "Score: " + score;
+                food = {x: Math.floor(Math.random()*20), y: Math.floor(Math.random()*20)};
+            } else {
+                snake.pop();
+            }
+
+            // Draw Snake body
+            ctx.fillStyle = "#00ff9d";
+            snake.forEach(part => ctx.fillRect(part.x * 15, part.y * 15, 13, 13));
+
+            // Collision with boundaries or self
+            if(head.x < 0 || head.x >= 20 || head.y < 0 || head.y >= 20) {
+                clearInterval(gameInterval);
+                alert("Game Over! Your Score: " + score);
+                resetGame();
+            }
         }
-        </script>
-    
 
-</body>
-</html>
+        function resetGame() {
+            clearInterval(gameInterval);
+            snake = [{x: 10, y: 10}];
+            dx = 1; dy = 0; score = 0;
+            scoreText.innerText = "Score: 0";
+            gameInterval = setInterval(draw, 160);
+        }
+
+        // Tap canvas to change direction clockwise
+        canvas.addEventListener("click", () => {
+            if(dx === 1) { dx = 0; dy = 1; }
+            else if(dy === 1) { dx = -1; dy = 0; }
+        
