@@ -1,4 +1,4 @@
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,15 +11,17 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: #0b111e;
-            color: #e2e8f0;
+            background-color: #030712;
+            color: #f3f4f6;
             padding-bottom: 60px;
         }
         
         /* Modern Navigation Bar */
         nav {
-            background-color: #0f172a;
-            border-bottom: 1px solid #1e293b;
+            background-color: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1f2937;
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -29,13 +31,13 @@
             z-index: 100;
         }
 
-        /* Pure CSS Toggle Menu Logic (No JavaScript Needed) */
+        /* Pure CSS Toggle Menu Logic */
         #menu-toggle {
             display: none;
         }
         .menu-btn {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid #1e293b;
+            background: rgba(31, 41, 55, 0.6);
+            border: 1px solid #374151;
             border-radius: 10px;
             width: 45px;
             height: 45px;
@@ -49,14 +51,14 @@
         .menu-btn span {
             width: 20px;
             height: 2px;
-            background-color: #94a3b8;
+            background-color: #9ca3af;
             display: block;
             border-radius: 2px;
         }
         #mobile-menu {
             display: none;
-            background-color: #0f172a;
-            border-bottom: 1px solid #1e293b;
+            background-color: #030712;
+            border-bottom: 1px solid #1f2937;
             padding: 10px 0;
             text-align: center;
             position: sticky;
@@ -65,81 +67,125 @@
         }
         #mobile-menu a {
             display: block;
-            color: #94a3b8;
+            color: #9ca3af;
             text-decoration: none;
             padding: 12px;
             font-weight: 600;
             font-size: 1.05rem;
-            border-bottom: 1px solid rgba(30, 41, 59, 0.4);
+            border-bottom: 1px solid rgba(31, 41, 55, 0.4);
         }
         #mobile-menu a:hover {
             color: #38bdf8;
-            background: rgba(30, 41, 59, 0.4);
+            background: rgba(31, 41, 55, 0.4);
         }
-        /* When the hidden checkbox is checked, show the menu instantly */
         #menu-toggle:checked ~ #mobile-menu {
             display: block;
         }
 
-        /* Modern React Gradient Header */
-        header {
-            background: radial-gradient(circle at top right, rgba(0, 198, 255, 0.15), transparent), 
-                        linear-gradient(180deg, #0f172a, #0b111e);
-            padding: 60px 20px;
+        /* Modern Abhrajyoti Style Hero Section */
+        .hero-section {
+            padding: 60px 20px 40px 20px;
             text-align: center;
-            border-bottom: 1px solid #1e293b;
-            position: relative;
+            background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.08), transparent 60%);
         }
-        header h1 {
+        .portfolio-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(31, 41, 55, 0.5);
+            border: 1px solid #374151;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+        .portfolio-badge span {
+            width: 8px;
+            height: 8px;
+            background-color: #0ea5e9;
+            border-radius: 50%;
+        }
+        .hero-section h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #ffffff, #94a3b8);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .hero-section h1 span.name {
+            background: linear-gradient(to right, #38bdf8, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        header p {
-            font-size: 1.1rem;
+        .role-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
             color: #38bdf8;
-            margin-top: 12px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin: 20px 0 25px 0;
         }
-
-        /* Profile Image */
-        .profile-img-div {
-            text-align: center;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-        }
-        .profile-img {
-            width: 110px;
-            height: 110px;
+        .role-badge span {
+            width: 8px;
+            height: 8px;
+            background-color: #38bdf8;
             border-radius: 50%;
-            border: 3px solid #00c6ff;
-            object-fit: cover;
-            box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
-            background-color: #0f172a;
+        }
+        .hero-desc {
+            max-width: 500px;
+            margin: 0 auto 35px auto;
+            color: #9ca3af;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .hero-desc strong {
+            color: #fff;
+        }
+        
+        /* Modern Gradient Buttons */
+        .hero-btn {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin: 12px auto;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            transition: opacity 0.2s;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #0284c7, #a855f7);
+            color: #fff;
+        }
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid #374151;
+            color: #fff;
+        }
+        .hero-btn:hover {
+            opacity: 0.9;
         }
 
+        /* Container & Cards */
         .container {
             padding: 20px;
             max-width: 650px;
             margin: 0 auto;
         }
-
-        /* React-Inspired Tech Cards */
         .card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(17, 24, 39, 0.5);
+            border: 1px solid #1f2937;
             padding: 30px;
             border-radius: 16px;
-            border: 1px solid #1e293b;
             margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         .card h2 {
             color: #38bdf8;
@@ -159,11 +205,53 @@
         }
         .card p {
             line-height: 1.7;
-            color: #94a3b8;
+            color: #9ca3af;
             font-size: 1rem;
         }
 
-        /* Modern Skill Badges */
+        /* Terminal Window Header Style (Perfect Abhrajyoti Look) */
+        .terminal-card {
+            padding: 0;
+            overflow: hidden;
+            background: rgba(17, 24, 39, 0.4);
+        }
+        .terminal-header {
+            background-color: #0b1329;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #1f2937;
+        }
+        .dot-container {
+            display: flex;
+            gap: 8px;
+            margin-right: 20px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-red { background-color: #ef4444; }
+        .dot-yellow { background-color: #eab308; }
+        .dot-green { background-color: #22c55e; }
+        
+        .terminal-tabs {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #4b5563;
+            display: flex;
+            gap: 15px;
+        }
+        .tab-active {
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Skill Badges */
         .skill-badge {
             display: inline-block;
             background: rgba(56, 189, 248, 0.06);
@@ -176,41 +264,42 @@
             border: 1px solid rgba(56, 189, 248, 0.15);
         }
 
-        /* Lists */
-        .card ul {
-            padding-left: 20px;
-            color: #94a3b8;
-            line-height: 1.9;
+        /* Profile Image */
+        .profile-img-div {
+            text-align: center;
+            margin: 20px 0;
         }
-        .card ul li::marker {
-            color: #38bdf8;
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #38bdf8;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
         }
 
         .section-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #1e293b, transparent);
+            background: linear-gradient(90deg, transparent, #1f2937, transparent);
             margin: 25px 0;
         }
 
-        /* Modern Contact Links */
         .contact-link {
             display: flex;
             align-items: center;
-            color: #94a3b8;
+            color: #9ca3af;
             text-decoration: none;
             margin-bottom: 14px;
             font-size: 1rem;
             padding: 12px;
-            background: rgba(30, 41, 59, 0.4);
+            background: rgba(31, 41, 55, 0.4);
             border-radius: 10px;
-            border: 1px solid transparent;
             transition: all 0.2s;
         }
         .contact-link:hover {
             color: #fff;
-            border-color: #38bdf8;
-            background: rgba(30, 41, 59, 0.8);
+            background: rgba(31, 41, 55, 0.8);
         }
         .contact-link strong {
             color: #38bdf8;
@@ -218,60 +307,69 @@
             min-width: 90px;
         }
 
-        /* Modern Input Fields */
-        .form-group {
-            margin-bottom: 18px;
-        }
+        .form-group { margin-bottom: 18px; }
         .form-input {
             width: 100%;
             padding: 16px;
-            background-color: #0f172a;
-            border: 1px solid #1e293b;
+            background-color: #030712;
+            border: 1px solid #1f2937;
             border-radius: 12px;
             color: #fff;
             font-size: 1rem;
             outline: none;
         }
-        .form-input:focus {
-            border-color: #38bdf8;
-        }
+        .form-input:focus { border-color: #38bdf8; }
         
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #00c6ff, #0066ff);
+            background: linear-gradient(135deg, #0284c7, #a855f7);
             border: none;
             border-radius: 12px;
             color: white;
             font-size: 1.05rem;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.25);
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.25);
         }
 
         footer {
             text-align: center;
             padding: 30px;
             font-size: 0.85rem;
-            color: #475569;
-            border-top: 1px solid #1e293b;
-            background-color: #0f172a;
+            color: #4b5563;
+            border-top: 1px solid #1f2937;
+            background-color: #030712;
             margin-top: 60px;
+        }
+
+        /* Grid contribution simulation style for Soumyajit text */
+        .grid-name-container {
+            background: #070b16;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #4b5563;
+        }
+        .grid-text-green {
+            color: #10b981;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <!-- Hidden checkbox to handle menu click -->
     <input type="checkbox" id="menu-toggle">
 
-    <!-- Top Navigation Bar -->
     <nav>
         <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 5px;">
             <span style="color: #38bdf8;">&lt;/&gt;</span> soumyajit
         </div>
         
-        <!-- Label acting as the clickable 3-line menu button -->
         <label for="menu-toggle" class="menu-btn">
             <span></span>
             <span></span>
@@ -279,7 +377,6 @@
         </label>
     </nav>
 
-    <!-- Dropdown Menu items -->
     <div id="mobile-menu">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -289,10 +386,24 @@
         <a href="#contact">Message Me</a>
     </div>
 
-    <header>
-        <h1>Soumyajit Mukherjee</h1>
-        <p>BCA Student / Python Developer / Tech Enthusiast</p>
-    </header>
+    <section class="hero-section">
+        <div class="portfolio-badge">
+            <span></span> Welcome to my portfolio!
+        </div>
+        
+        <h1>Hello!<br>I'm <span class="name">Soumyajit Mukherjee</span></h1>
+        
+        <div class="role-badge">
+            <span></span> Python Developer
+        </div>
+        
+        <p class="hero-desc">
+            Creating <strong>innovative</strong> digital experiences with modern technology stacks that transform ideas into powerful solutions.
+        </p>
+        
+        <a href="#projects" class="hero-btn btn-primary">View Projects &rarr;</a>
+        <a href="#contact" class="hero-btn btn-secondary">Contact Me &#9993;</a>
+    </section>
 
     <div class="profile-img-div">
         <img class="profile-img" src="IMG-20260503-WA0013.jpg" alt="Soumyajit Mukherjee">
@@ -300,40 +411,37 @@
 
     <div class="container">
 
-        <!-- About Me Card -->
         <div id="about" class="card">
             <h2>About Me</h2>
             <p>Hello! I am Soumyajit Mukherjee from Karimpur, West Bengal, India.</p>
             <p>Currently pursuing BCA at Global College of Science and Technology. I am deeply passionate about Python programming, modern web technologies, and software development. My goal is to craft impactful digital solutions.</p>
         </div>
 
-        <!-- Education Card -->
         <div id="education" class="card">
             <h2>Education</h2>
-            <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.9; border: 1px solid #1e293b;">
+            <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
             <p style="margin-top: 5px;"><strong>BCA (2023–2027)</strong></p>
-            <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Global College of Science and Technology</p>
+            <p style="margin: 0; color: #6b7280; font-size: 0.95rem;">Global College of Science and Technology</p>
             <hr class="section-divider">
             <p><strong>Secondary & Higher Secondary (Class 5–12)</strong></p>
-            <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.9; border: 1px solid #1e293b;">
-            <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Karimpur Jagannath High School</p>
+            <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.8; border: 1px solid #1f2937;">
+            <p style="margin: 0; color: #6b7280; font-size: 0.95rem;">Karimpur Jagannath High School</p>
         </div>
 
-        <!-- Experience / Internship Card -->
         <div id="experience" class="card">
             <h2>Experience</h2>
             <div style="display: flex; flex-direction: column; gap: 5px;">
-                <img src="internship.jpg" alt="Euphoria GenX Kolkata" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.9; border: 1px solid #1e293b;">
+                <img src="internship.jpg" alt="Euphoria GenX Kolkata" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
                 <p style="margin: 0; font-size: 1.15rem; color: #fff;">
                     <strong>Software Development Intern</strong>
                 </p>
                 <p style="margin: 0; color: #38bdf8; font-weight: 500; font-size: 0.95rem;">
                     Euphoria GenX, Kolkata
                 </p>
-                <p style="margin: 5px 0 12px 0; color: #64748b; font-size: 0.85rem; letter-spacing: 0.5px;">
-                    Job-Orient體 IT Training & Project Internship
+                <p style="margin: 5px 0 12px 0; color: #6b7280; font-size: 0.85rem; letter-spacing: 0.5px;">
+                    Job-Oriented IT Training & Project Internship
                 </p>
-                <ul style="margin: 0; padding-left: 20px; color: #94a3b8; line-height: 1.7; font-size: 0.95rem;">
+                <ul style="margin: 0; padding-left: 20px; color: #9ca3af; line-height: 1.7; font-size: 0.95rem;">
                     <li>Worked on real-world industry projects under expert guidance.</li>
                     <li>Gained hands-on experience in software development practices and tools.</li>
                     <li>Developed strong problem-solving and coding skills tailored for technical roles.</li>
@@ -341,19 +449,19 @@
             </div>
         </div>
 
-        <!-- Terminal Styled Skills Card with top dots -->
-        <div id="skills" class="card" style="padding: 0; overflow: hidden; background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; border-radius: 16px;">
-            <div style="background-color: #0f172a; padding: 12px 20px; display: flex; align-items: center; border-bottom: 1px solid #1e293b;">
-                <div style="display: flex; gap: 8px; margin-right: 20px;">
-                    <span style="width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; display: inline-block;"></span>
-                    <span style="width: 12px; height: 12px; background-color: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
-                    <span style="width: 12px; height: 12px; background-color: #27c93f; border-radius: 50%; display: inline-block;"></span>
+        <div id="skills" class="card terminal-card">
+            <div class="terminal-header">
+                <div class="dot-container">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
                 </div>
-                <div style="font-family: monospace; font-size: 0.85rem; color: #64748b; display: flex; gap: 15px;">
-                    <span style="color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 2px 8px; border-radius: 4px;">• terminal</span>
+                <div class="terminal-tabs">
+                    <span class="tab-active">• terminal</span>
                     <span>• skills</span>
                 </div>
             </div>
+            
             <div style="padding: 25px;">
                 <h2 style="color: #38bdf8; margin-top: 0; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700;">Skills</h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 2px;">
@@ -364,10 +472,23 @@
                     <span class="skill-badge">Web Development</span>
                     <span class="skill-badge">Git & GitHub</span>
                 </div>
+
+                <div class="grid-name-container">
+                    <div style="margin-bottom: 5px; color: #9ca3af;">&gt; echo $MOTTO</div>
+                    <div style="color: #fff; font-style: italic; margin-bottom: 15px;">"Ship clarity before cleverness."</div>
+                    <div style="margin-bottom: 5px; color: #9ca3af;">CODE PULSE</div>
+                    <div class="grid-text-green">
+                        ■ ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■<br>
+                        ■         ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
+                        ■ ■ ■ ■   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■     ■       ■  <br>
+                              ■   ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
+                        ■ ■ ■ ■   ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■     ■    ■ ■ ■
+                    </div>
+                    <div style="text-align: right; margin-top: 5px; font-size: 0.65rem; color: #4b5563;">&copy; 2026 | zsh</div>
+                </div>
             </div>
         </div>
 
-        <!-- Projects Card -->
         <div id="projects" class="card">
             <h2>Projects</h2>
             <ul>
@@ -377,13 +498,11 @@
             </ul>
         </div>
 
-        <!-- Vision Card -->
         <div class="card">
             <h2>My Vision</h2>
             <p>To master software engineering frameworks and build high-performance web applications that add immense value to the global developer community.</p>
         </div>
 
-        <!-- Contact Info Card -->
         <div class="card">
             <h2>Connect</h2>
             <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
@@ -395,13 +514,12 @@
             <a class="contact-link" href="mailto:your-soumyajitm014@gmail.com">
                 <strong>Email</strong> your-soumyajitm014@gmail.com ✉
             </a>
-            <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #64748b;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
+            <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #475569;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
         </div>
 
-        <!-- Message Me Contact Form -->
-        <div id="contact" class="card" style="background: rgba(15, 23, 42, 0.8); border-color: #1e293b;">
+        <div id="contact" class="card" style="background: rgba(17, 24, 39, 0.7);">
             <h2 style="color: #38bdf8; margin-bottom: 5px;">Message Me</h2>
-            <p style="color: #64748b; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
+            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
             
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                 <div class="form-group">
@@ -429,4 +547,5 @@
     </footer>
 
 </body>
-</html>
+                  </html>
+                  
