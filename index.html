@@ -364,6 +364,19 @@
                 <li><strong>Python Mini Projects</strong> - A collection of automation and utility scripts.</li>
             </ul>
         </div>
+                <!-- Snake Game Card -->
+        <div id="game" class="card">
+            <h2 style="color: #00ff9d;">Snake Game 🐍</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Play a quick game directly on my portfolio!</p>
+            
+            <!-- গেম এরিয়া -->
+            <canvas id="gameCanvas" width="300" height="300" style="background: #000; border-radius: 8px; display: block; margin: 0 auto; border: 2px solid #38bdf8;"></canvas>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <button onclick="startGame()" style="background: #38bdf8; color: #000; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer;">Start Game</button>
+            </div>
+        </div>
+        
 
         <!-- Vision Card -->
         <div class="card">
@@ -427,6 +440,29 @@
             }
         }
     </script>
+        <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        let snake = [{x: 150, y: 150}];
+        let food = {x: 100, y: 100};
+        let dx = 10, dy = 0;
+
+        function startGame() {
+            setInterval(function() {
+                // গেম লজিক এখানে হবে (এটি একটি বেসিক ফ্রেম)
+                ctx.fillStyle = "black";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // সাপ এবং খাবারের ডিজাইন...
+                ctx.fillStyle = "lime";
+                snake.forEach(part => ctx.fillRect(part.x, part.y, 10, 10));
+                
+                ctx.fillStyle = "red";
+                ctx.fillRect(food.x, food.y, 10, 10);
+            }, 100);
+        }
+        </script>
+    
 
 </body>
 </html>
