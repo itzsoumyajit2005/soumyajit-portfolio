@@ -281,15 +281,39 @@
         
 
         <!-- Skills Card -->
-        <div class="card">
-            <h2>Skills</h2>
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">Java</span>
-            <span class="skill-badge">HTML5</span>
-            <span class="skill-badge">CSS3</span>
-            <span class="skill-badge">Web Development</span>
-            <span class="skill-badge">Git & GitHub</span>
+                <!-- Terminal Styled Skills Card -->
+        <div class="card" style="padding: 0; overflow: hidden; background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; border-radius: 16px;">
+            
+            <!-- উইন্ডো হেডার (থ্রি ডট অপশন এবং টার্মিনাল নাম) -->
+            <div style="background-color: #0f172a; padding: 12px 20px; display: flex; align-items: center; border-bottom: 1px solid #1e293b;">
+                <!-- ৩টি রঙিন ডট -->
+                <div style="display: flex; gap: 8px; margin-right: 20px;">
+                    <span style="width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; display: inline-block;"></span>
+                    <span style="width: 12px; height: 12px; background-color: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
+                    <span style="width: 12px; height: 12px; background-color: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                </div>
+                <!-- হেডার টেক্সট -->
+                <div style="font-family: monospace; font-size: 0.85rem; color: #64748b; display: flex; gap: 15px;">
+                    <span style="color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 2px 8px; border-radius: 4px;">• terminal</span>
+                    <span>• skills</span>
+                </div>
+            </div>
+
+            <!-- স্কিল কার্ডের ভেতরের মূল অংশ -->
+            <div style="padding: 25px;">
+                <h2 style="color: #38bdf8; margin-top: 0; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700;">Skills</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 2px;">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">Web Development</span>
+                    <span class="skill-badge">Git & GitHub</span>
+                </div>
+            </div>
+
         </div>
+        
 
         <!-- Projects Card -->
         <div class="card">
