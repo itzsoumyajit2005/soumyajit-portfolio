@@ -16,11 +16,24 @@
             padding-bottom: 60px;
         }
         
+        /* Modern Navigation Bar */
+        nav {
+            background-color: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
         /* Modern React Gradient Header */
         header {
             background: radial-gradient(circle at top right, rgba(0, 198, 255, 0.15), transparent), 
                         linear-gradient(180deg, #0f172a, #0b111e);
-            padding: 80px 20px 60px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-bottom: 1px solid #1e293b;
             position: relative;
@@ -37,7 +50,7 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.5px;
             background: linear-gradient(135deg, #ffffff, #94a3b8);
@@ -135,7 +148,6 @@
             color: #38bdf8;
         }
 
-        /* Custom Separator Line */
         .section-divider {
             border: 0;
             height: 1px;
@@ -187,7 +199,6 @@
             border-color: #38bdf8;
         }
         
-        /* Modern Gradient Button */
         .submit-btn {
             width: 100%;
             padding: 16px;
@@ -223,6 +234,18 @@
 </head>
 <body>
 
+    <nav>
+        <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 5px;">
+            <span style="color: #38bdf8;">&lt;/&gt;</span> soumyajit
+        </div>
+        
+        <button onclick="alert('Menu clicked!')" style="background: rgba(30, 41, 59, 0.6); border: 1px solid #1e293b; border-radius: 10px; width: 45px; height: 45px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; cursor: pointer; outline: none;">
+            <span style="width: 20px; height: 2px; background-color: #94a3b8; display: block; border-radius: 2px;"></span>
+            <span style="width: 20px; height: 2px; background-color: #94a3b8; display: block; border-radius: 2px;"></span>
+            <span style="width: 20px; height: 2px; background-color: #94a3b8; display: block; border-radius: 2px;"></span>
+        </button>
+    </nav>
+
     <header>
         <h1>Soumyajit Mukherjee</h1>
         <p>BCA Student / Python Developer / Tech Enthusiast</p>
@@ -234,33 +257,30 @@
 
     <div class="container">
 
-        <!-- About Me Card -->
         <div class="card">
             <h2>About Me</h2>
             <p>Hello! I am Soumyajit Mukherjee from Karimpur, West Bengal, India.</p>
             <p>Currently pursuing BCA at Global College of Science and Technology. I am deeply passionate about Python programming, modern web technologies, and software development. My goal is to craft impactful digital solutions.</p>
         </div>
 
-        <!-- Education Card -->
         <div class="card">
             <h2>Education</h2>
             
-            <!-- College Section -->
             <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.9; border: 1px solid #1e293b;">
             <p style="margin-top: 5px;"><strong>BCA (2023–2027)</strong></p>
             <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Global College of Science and Technology</p>
             
             <hr class="section-divider">
             
-            <!-- School Section -->
             <p><strong>Secondary & Higher Secondary (Class 5–12)</strong></p>
             <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.9; border: 1px solid #1e293b;">
             <p style="margin: 0; color: #64748b; font-size: 0.95rem;">Karimpur Jagannath High School</p>
         </div>
-                <!-- Experience / Internship Card -->
+
         <div class="card">
             <h2>Experience</h2>
             <div style="display: flex; flex-direction: column; gap: 5px;">
+                <img src="internship.jpg" alt="Euphoria GenX Kolkata" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.9; border: 1px solid #1e293b;">
                 <p style="margin: 0; font-size: 1.15rem; color: #fff;">
                     <strong>Software Development Intern</strong>
                 </p>
@@ -270,7 +290,6 @@
                 <p style="margin: 5px 0 12px 0; color: #64748b; font-size: 0.85rem; letter-spacing: 0.5px;">
                     Job-Oriented IT Training & Project Internship
                 </p>
-                
                 <ul style="margin: 0; padding-left: 20px; color: #94a3b8; line-height: 1.7; font-size: 0.95rem;">
                     <li>Worked on real-world industry projects under expert guidance.</li>
                     <li>Gained hands-on experience in software development practices and tools.</li>
@@ -278,28 +297,19 @@
                 </ul>
             </div>
         </div>
-        
 
-        <!-- Skills Card -->
-                <!-- Terminal Styled Skills Card -->
         <div class="card" style="padding: 0; overflow: hidden; background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; border-radius: 16px;">
-            
-            <!-- উইন্ডো হেডার (থ্রি ডট অপশন এবং টার্মিনাল নাম) -->
             <div style="background-color: #0f172a; padding: 12px 20px; display: flex; align-items: center; border-bottom: 1px solid #1e293b;">
-                <!-- ৩টি রঙিন ডট -->
                 <div style="display: flex; gap: 8px; margin-right: 20px;">
                     <span style="width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; display: inline-block;"></span>
                     <span style="width: 12px; height: 12px; background-color: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
                     <span style="width: 12px; height: 12px; background-color: #27c93f; border-radius: 50%; display: inline-block;"></span>
                 </div>
-                <!-- হেডার টেক্সট -->
                 <div style="font-family: monospace; font-size: 0.85rem; color: #64748b; display: flex; gap: 15px;">
                     <span style="color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 2px 8px; border-radius: 4px;">• terminal</span>
                     <span>• skills</span>
                 </div>
             </div>
-
-            <!-- স্কিল কার্ডের ভেতরের মূল অংশ -->
             <div style="padding: 25px;">
                 <h2 style="color: #38bdf8; margin-top: 0; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700;">Skills</h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 2px;">
@@ -311,11 +321,8 @@
                     <span class="skill-badge">Git & GitHub</span>
                 </div>
             </div>
-
         </div>
-        
 
-        <!-- Projects Card -->
         <div class="card">
             <h2>Projects</h2>
             <ul>
@@ -325,31 +332,25 @@
             </ul>
         </div>
 
-        <!-- Vision Card -->
         <div class="card">
             <h2>My Vision</h2>
             <p>To master software engineering frameworks and build high-performance web applications that add immense value to the global developer community.</p>
         </div>
 
-        <!-- Contact Info Card -->
         <div class="card">
             <h2>Connect</h2>
-            
             <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
                 <strong>Instagram</strong> @itz_soumyajit_2005 ↗
             </a>
-            
             <a class="contact-link" href="https://www.facebook.com/share/18SCDVYxc4/" target="_blank">
                 <strong>Facebook</strong> Soumyajit Mukherjee ↗
             </a>
-
             <a class="contact-link" href="mailto:your-soumyajitm014@gmail.com">
                 <strong>Email</strong> your-soumyajitm014@gmail.com ✉
             </a>
             <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #64748b;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
         </div>
 
-        <!-- Message Me Contact Form -->
         <div class="card" style="background: rgba(15, 23, 42, 0.8); border-color: #1e293b;">
             <h2 style="color: #38bdf8; margin-bottom: 5px;">Message Me</h2>
             <p style="color: #64748b; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
@@ -381,4 +382,3 @@
 
 </body>
 </html>
-
