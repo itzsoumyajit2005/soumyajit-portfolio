@@ -130,21 +130,12 @@
             font-weight: 600;
             margin: 20px 0 25px 0;
         }
-        .role-badge span {
-            width: 8px;
-            height: 8px;
-            background-color: #38bdf8;
-            border-radius: 50%;
-        }
         .hero-desc {
             max-width: 500px;
             margin: 0 auto 35px auto;
             color: #9ca3af;
             font-size: 1.05rem;
             line-height: 1.6;
-        }
-        .hero-desc strong {
-            color: #fff;
         }
         
         /* Gradient Buttons */
@@ -159,7 +150,6 @@
             text-decoration: none;
             border-radius: 12px;
             text-align: center;
-            transition: opacity 0.2s;
         }
         .btn-primary {
             background: linear-gradient(90deg, #0284c7, #a855f7);
@@ -170,15 +160,13 @@
             border: 1px solid #374151;
             color: #fff;
         }
-        .hero-btn:hover {
-            opacity: 0.9;
-        }
 
-        /* Container & Cards */
+        /* Container & Cards with Responsive Width Fix */
         .container {
             padding: 20px;
             max-width: 650px;
             margin: 0 auto;
+            width: 100%;
         }
         .card {
             background: rgba(17, 24, 39, 0.5);
@@ -186,6 +174,7 @@
             padding: 30px;
             border-radius: 16px;
             margin-bottom: 25px;
+            width: 100%;
         }
         .card h2 {
             color: #38bdf8;
@@ -227,31 +216,14 @@
             gap: 8px;
             margin-right: 20px;
         }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: inline-block;
-        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
         .dot-red { background-color: #ef4444; }
         .dot-yellow { background-color: #eab308; }
         .dot-green { background-color: #22c55e; }
-        
-        .terminal-tabs {
-            font-family: monospace;
-            font-size: 0.85rem;
-            color: #4b5563;
-            display: flex;
-            gap: 15px;
-        }
-        .tab-active {
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.1);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
+        .terminal-tabs { font-family: monospace; font-size: 0.85rem; color: #4b5563; }
+        .tab-active { color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 2px 8px; border-radius: 4px; }
 
-        /* Skill Badges with special highlight for core stack */
+        /* Skill Badges */
         .skill-badge {
             display: inline-block;
             background: rgba(56, 189, 248, 0.06);
@@ -300,42 +272,51 @@
             padding: 12px;
             background: rgba(31, 41, 55, 0.4);
             border-radius: 10px;
-            transition: all 0.2s;
         }
-        .contact-link:hover {
-            color: #fff;
-            background: rgba(31, 41, 55, 0.8);
-        }
-        .contact-link strong {
-            color: #38bdf8;
-            margin-right: 8px;
-            min-width: 90px;
-        }
+        .contact-link strong { color: #38bdf8; margin-right: 8px; min-width: 90px; }
 
-        .form-group { margin-bottom: 18px; }
+        /* Perfect Abhrajyoti Style Message Me Form Fields */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
         .form-input {
             width: 100%;
-            padding: 16px;
-            background-color: #030712;
+            padding: 18px;
+            background-color: #0b1329; /* ডার্ক লাক্সারি ব্যাকগ্রাউন্ড */
             border: 1px solid #1f2937;
-            border-radius: 12px;
+            border-radius: 14px; /* প্রিমিয়াম কার্ভড বর্ডার */
             color: #fff;
             font-size: 1rem;
             outline: none;
+            display: block;
+            transition: border-color 0.2s;
         }
-        .form-input:focus { border-color: #38bdf8; }
+        .form-input:focus {
+            border-color: #38bdf8;
+        }
         
+        /* Premium Gradient Submit Button */
         .submit-btn {
             width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #0284c7, #a855f7);
+            padding: 18px;
+            background: linear-gradient(90deg, #0284c7, #a855f7); /* অব্রজ্যোতির স্টাইলের গ্রেডিয়েন্ট */
             border: none;
-            border-radius: 12px;
+            border-radius: 14px;
             color: white;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.2);
         }
 
         footer {
@@ -348,7 +329,6 @@
             margin-top: 60px;
         }
 
-        /* Grid contribution simulation style */
         .grid-name-container {
             background: #070b16;
             border: 1px solid #1f2937;
@@ -461,7 +441,7 @@
             </div>
         </div>
 
-        <!-- Terminal Styled Skills Card (Updated Order) -->
+        <!-- Terminal Styled Skills Card -->
         <div id="skills" class="card terminal-card">
             <div class="terminal-header">
                 <div class="dot-container">
@@ -478,12 +458,9 @@
             <div style="padding: 25px;">
                 <h2 style="color: #38bdf8; margin-top: 0; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700;">Skills</h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 2px;">
-                    <!-- C Programming at the top -->
                     <span class="skill-badge badge-highlight">C Programming</span>
-                    <!-- Python & Django paired together -->
                     <span class="skill-badge">Python</span>
                     <span class="skill-badge badge-highlight">Django Framework</span>
-                    <!-- Other supporting skills -->
                     <span class="skill-badge">Java</span>
                     <span class="skill-badge">HTML5</span>
                     <span class="skill-badge">CSS3</span>
@@ -499,11 +476,10 @@
                     <div class="grid-text-green">
                         ■ ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■<br>
                         ■         ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
-                        ■ ■ ■ ■   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■     ■       ■  <br>
+                        ■ ■ ■ ■   ...   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■     ■       ■  <br>
                               ■   ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
                         ■ ■ ■ ■   ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■     ■    ■ ■ ■
                     </div>
-                    <div style="text-align: right; margin-top: 5px; font-size: 0.65rem; color: #4b5563;">&copy; 2026 | zsh</div>
                 </div>
             </div>
         </div>
@@ -539,7 +515,7 @@
             <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #475569;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
         </div>
 
-        <!-- Message Me Contact Form -->
+        <!-- Message Me Contact Form (Perfected Layout matching screenshot) -->
         <div id="contact" class="card" style="background: rgba(17, 24, 39, 0.7);">
             <h2 style="color: #38bdf8; margin-bottom: 5px;">Message Me</h2>
             <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
@@ -550,4 +526,11 @@
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" class="form-input" placeholder="Your Email" required>
-               
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" class="form-input" placeholder="Your Message" style="resize: none;" required></textarea>
+                </div>
+                <button type="subm
