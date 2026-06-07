@@ -198,10 +198,10 @@
             font-size: 1rem;
         }
 
-        /* Project Content Styles */
+        /* Project UI Layout Changes */
         .project-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
             border-bottom: 1px solid rgba(31, 41, 55, 0.6);
         }
         .project-item:last-child {
@@ -210,19 +210,30 @@
             border-bottom: none;
         }
         .project-title {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: #fff;
             margin: 0 0 8px 0;
+            font-weight: 700;
         }
         .project-tech {
             font-size: 0.8rem;
             color: #c084fc;
             font-family: monospace;
             background: rgba(168, 85, 247, 0.1);
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 4px 10px;
+            border-radius: 6px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        .portfolio-screenshot {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #1f2937;
+            opacity: 0.95;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         /* Terminal Window Style */
@@ -413,7 +424,7 @@
         <a href="#contact" class="hero-btn btn-secondary">Contact Me &#9993;</a>
     </section>
 
-    <!-- আপনার নতুন প্রোফাইল ছবি -->
+    <!-- নতুন প্রোফাইল ইমেজ -->
     <div class="profile-img-div">
         <img class="profile-img" src="DR4K4_iEgAn_00_1780807616.jpg" alt="Soumyajit Mukherjee">
     </div>
@@ -481,23 +492,29 @@
             </div>
         </div>
 
-        <!-- 🔥 আপনার চমৎকার নতুন প্রজেক্ট এখানে যুক্ত করা হয়েছে -->
+        <!-- 🔥 ৫টি রিয়েল স্ক্রিনশটসহ আলটিমেট প্রজেক্ট সেকশন (সম্পূর্ণ ইংলিশে) -->
         <div id="projects" class="card">
             <h2>Projects</h2>
             
             <div class="project-item">
                 <h3 class="project-title">1. Attendance Tracker Portal</h3>
                 <span class="project-tech">Full-Stack | PHP & MySQL / Django</span>
-                <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
-                    একটি অ্যাডভান্সড স্টুডেন্ট ম্যানেজমেন্ট ও অ্যাটেনডেন্স সিস্টেম। যেখানে টিচার ও স্টুডেন্ট লগইন প্যানেল, কোর্স-সেমিস্টার অনুযায়ী রিয়েল-টাইম প্রেজেন্ট/অ্যাবসেন্ট মার্কিং এবং অটোমেটেড পার্সেন্টেজ রিপোর্ট জেনারেট করার দারুণ ইউজার ইন্টারফেস রয়েছে।
+                <p style="margin: 5px 0 12px 0; font-size: 0.95rem; color: #9ca3af;">
+                    An advanced student management and real-time attendance recording system tailored for university departments. Features premium authentication dashboards, student registers, class management sessions, automated CSV report exports, and full database transparency.
                 </p>
+                <!-- প্রজেক্টের ৫টি ছবি একের পর এক দারুণভাবে সাজানো -->
+                <img src="IMG-20250830-WA0012.jpg" alt="Attendance Portal Dashboard" class="portfolio-screenshot">
+                <img src="IMG-20250830-WA0011.jpg" alt="Mark Attendance System" class="portfolio-screenshot">
+                <img src="IMG-20250830-WA0010.jpg" alt="Secure Login Interface" class="portfolio-screenshot">
+                <img src="IMG-20250830-WA0008.jpg" alt="Integrated Contact Feedback Modal" class="portfolio-screenshot">
+                <img src="IMG-20250830-WA0007.jpg" alt="Attendance Summary Reports Generation" class="portfolio-screenshot">
             </div>
 
             <div class="project-item">
                 <h3 class="project-title">2. Shoe Shop Website</h3>
                 <span class="project-tech">Frontend | HTML5 & CSS3</span>
                 <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
-                    অ্যাট্রাক্টিভ ই-কমার্স লেআউট সম্বলিত শু-শপের একটি রেসপন্সিভ এবং মডার্ন ইন্টারফেস ডিজাইন।
+                    An interactive, user-friendly e-commerce storefront landing interface showcasing high-fidelity responsive components for premium item selections.
                 </p>
             </div>
 
@@ -505,7 +522,7 @@
                 <h3 class="project-title">3. Personal Portfolio Website</h3>
                 <span class="project-tech">Frontend | Web UI Development</span>
                 <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
-                    ডার্ক থিম এবং অ্যাডভান্সড টার্মিনাল গ্রাফিক্স স্টাইল পোর্টফোলিও, যা সম্পূর্ণ মোবাইল রেসপন্সিভ।
+                    A personalized, premium dark-themed portfolio terminal interface built specifically to highlight modern tech skills and production engineering modules.
                 </p>
             </div>
         </div>
@@ -524,22 +541,4 @@
             <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #6b7280;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
         </div>
 
-        <div id="contact" class="card" style="background: rgba(17, 24, 39, 0.7);">
-            <h2>Message Me</h2>
-            <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 25px;">Fill out the form below and I'll get back to you.</p>
-            
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your Name" required></div>
-                <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Your Email" required></div>
-                <div class="form-group"><input type="text" name="subject" class="form-input" placeholder="Subject" required></div>
-                <div class="form-group"><textarea name="message" rows="5" class="form-input" placeholder="Your Message" style="resize: none;" required></textarea></div>
-                <button type="submit" class="submit-btn">Send Message &nbsp; ✈</button>
-            </form>
-        </div>
-
-    </div>
-
-    <footer>&copy; 2026 Soumyajit Mukherjee</footer>
-</body>
-    </html>
-    
+        <div id="contact" class="card" style
