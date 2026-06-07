@@ -198,6 +198,33 @@
             font-size: 1rem;
         }
 
+        /* Project Content Styles */
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+        }
+        .project-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .project-title {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0 0 8px 0;
+        }
+        .project-tech {
+            font-size: 0.8rem;
+            color: #c084fc;
+            font-family: monospace;
+            background: rgba(168, 85, 247, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
         /* Terminal Window Style */
         .terminal-card {
             padding: 0;
@@ -386,7 +413,7 @@
         <a href="#contact" class="hero-btn btn-secondary">Contact Me &#9993;</a>
     </section>
 
-    <!-- নতুন প্রোফাইল ছবি -->
+    <!-- আপনার নতুন প্রোফাইল ছবি -->
     <div class="profile-img-div">
         <img class="profile-img" src="DR4K4_iEgAn_00_1780807616.jpg" alt="Soumyajit Mukherjee">
     </div>
@@ -454,16 +481,35 @@
             </div>
         </div>
 
+        <!-- 🔥 আপনার চমৎকার নতুন প্রজেক্ট এখানে যুক্ত করা হয়েছে -->
         <div id="projects" class="card">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>Personal Portfolio Website</strong></li>
-                <li><strong>Shoe Shop Website</strong></li>
-                <li><strong>Python & Django Web Apps</strong></li>
-            </ul>
+            
+            <div class="project-item">
+                <h3 class="project-title">1. Attendance Tracker Portal</h3>
+                <span class="project-tech">Full-Stack | PHP & MySQL / Django</span>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
+                    একটি অ্যাডভান্সড স্টুডেন্ট ম্যানেজমেন্ট ও অ্যাটেনডেন্স সিস্টেম। যেখানে টিচার ও স্টুডেন্ট লগইন প্যানেল, কোর্স-সেমিস্টার অনুযায়ী রিয়েল-টাইম প্রেজেন্ট/অ্যাবসেন্ট মার্কিং এবং অটোমেটেড পার্সেন্টেজ রিপোর্ট জেনারেট করার দারুণ ইউজার ইন্টারফেস রয়েছে।
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">2. Shoe Shop Website</h3>
+                <span class="project-tech">Frontend | HTML5 & CSS3</span>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
+                    অ্যাট্রাক্টিভ ই-কমার্স লেআউট সম্বলিত শু-শপের একটি রেসপন্সিভ এবং মডার্ন ইন্টারফেস ডিজাইন।
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">3. Personal Portfolio Website</h3>
+                <span class="project-tech">Frontend | Web UI Development</span>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #9ca3af;">
+                    ডার্ক থিম এবং অ্যাডভান্সড টার্মিনাল গ্রাফিক্স স্টাইল পোর্টফোলিও, যা সম্পূর্ণ মোবাইল রেসপন্সিভ।
+                </p>
+            </div>
         </div>
 
-        <!-- 🔥 আপনার ফেরত আসা কানেক্ট সেকশন (সোশ্যাল মিডিয়া আইডিগুলো) -->
         <div class="card">
             <h2>Connect</h2>
             <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
@@ -478,7 +524,6 @@
             <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #6b7280;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
         </div>
 
-        <!-- মেসেজ মে কন্টাক্ট ফর্ম এবং গ্রেডিয়েন্ট বাটন -->
         <div id="contact" class="card" style="background: rgba(17, 24, 39, 0.7);">
             <h2>Message Me</h2>
             <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 25px;">Fill out the form below and I'll get back to you.</p>
@@ -496,5 +541,5 @@
 
     <footer>&copy; 2026 Soumyajit Mukherjee</footer>
 </body>
-                                            </html>
-                                            
+    </html>
+    
