@@ -82,7 +82,7 @@
             display: block;
         }
 
-        /* Abhrajyoti Style Hero Section */
+        /* Hero Section */
         .hero-section {
             padding: 60px 20px 40px 20px;
             text-align: center;
@@ -161,7 +161,7 @@
             color: #fff;
         }
 
-        /* Container & Cards with Responsive Width Fix */
+        /* Container & Cards */
         .container {
             padding: 20px;
             max-width: 650px;
@@ -275,7 +275,7 @@
         }
         .contact-link strong { color: #38bdf8; margin-right: 8px; min-width: 90px; }
 
-        /* Perfect Abhrajyoti Style Message Me Form Fields */
+        /* Form Responsive Design */
         #contact form {
             display: flex;
             flex-direction: column;
@@ -288,24 +288,23 @@
         .form-input {
             width: 100%;
             padding: 18px;
-            background-color: #0b1329; /* ডার্ক লাক্সারি ব্যাকগ্রাউন্ড */
+            background-color: #0b1329;
             border: 1px solid #1f2937;
-            border-radius: 14px; /* প্রিমিয়াম কার্ভড বর্ডার */
+            border-radius: 14px;
             color: #fff;
             font-size: 1rem;
             outline: none;
             display: block;
-            transition: border-color 0.2s;
         }
         .form-input:focus {
             border-color: #38bdf8;
         }
         
-        /* Premium Gradient Submit Button */
+        /* Premium Submit Button Fix */
         .submit-btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(90deg, #0284c7, #a855f7); /* অব্রজ্যোতির স্টাইলের গ্রেডিয়েন্ট */
+            background: linear-gradient(90deg, #0284c7, #a855f7);
             border: none;
             border-radius: 14px;
             color: white;
@@ -350,12 +349,10 @@
 
     <input type="checkbox" id="menu-toggle">
 
-    <!-- Top Navigation Bar -->
     <nav>
         <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 5px;">
             <span style="color: #38bdf8;">&lt;/&gt;</span> soumyajit
         </div>
-        
         <label for="menu-toggle" class="menu-btn">
             <span></span>
             <span></span>
@@ -363,7 +360,6 @@
         </label>
     </nav>
 
-    <!-- Dropdown Menu items -->
     <div id="mobile-menu">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -373,75 +369,49 @@
         <a href="#contact">Message Me</a>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="portfolio-badge">
-            <span></span> Welcome to my portfolio!
-        </div>
-        
+        <div class="portfolio-badge"><span></span> Welcome to my portfolio!</div>
         <h1>Hello!<br>I'm <span class="name">Soumyajit Mukherjee</span></h1>
-        
-        <div class="role-badge">
-            <span></span> Python & Django Developer
-        </div>
-        
-        <p class="hero-desc">
-            Creating <strong>innovative</strong> digital experiences with modern technology stacks that transform ideas into powerful solutions.
-        </p>
-        
+        <div class="role-badge"><span></span> Python & Django Developer</div>
+        <p class="hero-desc">Creating <strong>innovative</strong> digital experiences with modern technology stacks.</p>
         <a href="#projects" class="hero-btn btn-primary">View Projects &rarr;</a>
         <a href="#contact" class="hero-btn btn-secondary">Contact Me &#9993;</a>
     </section>
 
-    <!-- Profile Image Container -->
     <div class="profile-img-div">
-        <img class="profile-img" src="IMG-20260503-WA0013.jpg" alt="Soumyajit Mukherjee">
+        <img class="profile-img" src="DR4K4_iEgAn_00_1780807616.jpg" alt="Soumyajit Mukherjee">
     </div>
 
     <div class="container">
 
-        <!-- About Me Card -->
         <div id="about" class="card">
             <h2>About Me</h2>
             <p>Hello! I am Soumyajit Mukherjee from Karimpur, West Bengal, India.</p>
-            <p>Currently pursuing BCA at Global College of Science and Technology. I am deeply passionate about Python programming, Django web framework, and software development. My goal is to craft impactful digital solutions.</p>
+            <p>Currently pursuing BCA at Global College of Science and Technology. I am deeply passionate about Python programming, Django web framework, and software development.</p>
         </div>
 
-        <!-- Education Card -->
         <div id="education" class="card">
             <h2>Education</h2>
-            <img src="1622667623phpORRckG.jpeg" alt="Global College of Science and Technology" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
-            <p style="margin-top: 5px;"><strong>BCA (2023–2027)</strong></p>
+            <img src="1622667623phpORRckG.jpeg" alt="Global College" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
+            <p><strong>BCA (2023–2027)</strong></p>
             <p style="margin: 0; color: #6b7280; font-size: 0.95rem;">Global College of Science and Technology</p>
             <hr class="section-divider">
             <p><strong>Secondary & Higher Secondary (Class 5–12)</strong></p>
-            <img src="school.jpg" alt="Karimpur Jagannath High School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.8; border: 1px solid #1f2937;">
+            <img src="school.jpg" alt="School" style="width: 100%; border-radius: 12px; margin: 10px 0 15px 0; opacity: 0.8; border: 1px solid #1f2937;">
             <p style="margin: 0; color: #6b7280; font-size: 0.95rem;">Karimpur Jagannath High School</p>
         </div>
 
-        <!-- Experience / Internship Card -->
         <div id="experience" class="card">
             <h2>Experience</h2>
-            <div style="display: flex; flex-direction: column; gap: 5px;">
-                <img src="internship.jpg" alt="Euphoria GenX Kolkata" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
-                <p style="margin: 0; font-size: 1.15rem; color: #fff;">
-                    <strong>Software Development Intern</strong>
-                </p>
-                <p style="margin: 0; color: #38bdf8; font-weight: 500; font-size: 0.95rem;">
-                    Euphoria GenX, Kolkata
-                </p>
-                <p style="margin: 5px 0 12px 0; color: #6b7280; font-size: 0.85rem; letter-spacing: 0.5px;">
-                    Job-Oriented IT Training & Project Internship
-                </p>
-                <ul style="margin: 0; padding-left: 20px; color: #9ca3af; line-height: 1.7; font-size: 0.95rem;">
-                    <li>Worked on real-world industry projects under expert guidance.</li>
-                    <li>Gained hands-on experience in software development practices and tools.</li>
-                    <li>Developed strong problem-solving and coding skills tailored for technical roles.</li>
-                </ul>
-            </div>
+            <img src="internship.jpg" alt="Internship" style="width: 100%; border-radius: 12px; margin-bottom: 15px; opacity: 0.8; border: 1px solid #1f2937;">
+            <p><strong>Software Development Intern</strong></p>
+            <p style="margin: 0; color: #38bdf8; font-weight: 500;">Euphoria GenX, Kolkata</p>
+            <ul style="margin-top: 10px; padding-left: 20px; color: #9ca3af; line-height: 1.7;">
+                <li>Worked on real-world industry projects under expert guidance.</li>
+                <li>Gained hands-on experience in software development practices.</li>
+            </ul>
         </div>
 
-        <!-- Terminal Styled Skills Card -->
         <div id="skills" class="card terminal-card">
             <div class="terminal-header">
                 <div class="dot-container">
@@ -449,90 +419,44 @@
                     <span class="dot dot-yellow"></span>
                     <span class="dot dot-green"></span>
                 </div>
-                <div class="terminal-tabs">
-                    <span class="tab-active">• terminal</span>
-                    <span>• skills</span>
-                </div>
+                <div class="terminal-tabs"><span class="tab-active">• terminal</span></div>
             </div>
-            
             <div style="padding: 25px;">
-                <h2 style="color: #38bdf8; margin-top: 0; font-size: 1.4rem; margin-bottom: 20px; font-weight: 700;">Skills</h2>
+                <h2>Skills</h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 2px;">
                     <span class="skill-badge badge-highlight">C Programming</span>
                     <span class="skill-badge">Python</span>
                     <span class="skill-badge badge-highlight">Django Framework</span>
                     <span class="skill-badge">Java</span>
-                    <span class="skill-badge">HTML5</span>
-                    <span class="skill-badge">CSS3</span>
-                    <span class="skill-badge">Web Development</span>
-                    <span class="skill-badge">Git & GitHub</span>
-                </div>
-
-                <!-- Green contribution pulse graphic -->
-                <div class="grid-name-container">
-                    <div style="margin-bottom: 5px; color: #9ca3af;">&gt; echo $MOTTO</div>
-                    <div style="color: #fff; font-style: italic; margin-bottom: 15px;">"Ship clarity before cleverness."</div>
-                    <div style="margin-bottom: 5px; color: #9ca3af;">CODE PULSE</div>
-                    <div class="grid-text-green">
-                        ■ ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■<br>
-                        ■         ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
-                        ■ ■ ■ ■   ...   ■   ■   ■   ■   ■ ■ ■   ■ ■ ■   ■ ■ ■     ■       ■  <br>
-                              ■   ■   ■   ■   ■   ■   ■   ■   ■   ■     ■       ■  <br>
-                        ■ ■ ■ ■   ■ ■ ■   ■ ■ ■   ■   ■   ■   ■   ■   ■ ■ ■     ■    ■ ■ ■
-                    </div>
+                    <span class="skill-badge">HTML5/CSS3</span>
                 </div>
             </div>
         </div>
 
-        <!-- Projects Card -->
         <div id="projects" class="card">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Personal Portfolio Website</strong> - A modern tech portfolio built with responsive HTML & CSS.</li>
-                <li><strong>Shoe Shop Website</strong> - An interactive web layout for an e-commerce platform.</li>
-                <li><strong>Python & Django Web Apps</strong> - Backend automation and responsive web platforms.</li>
+                <li><strong>Personal Portfolio Website</strong></li>
+                <li><strong>Shoe Shop Website</strong></li>
+                <li><strong>Python & Django Web Apps</strong></li>
             </ul>
         </div>
 
-        <!-- Vision Card -->
-        <div class="card">
-            <h2>My Vision</h2>
-            <p>To master software engineering frameworks and build high-performance web applications that add immense value to the global developer community.</p>
-        </div>
-
-        <!-- Contact Info Card -->
-        <div class="card">
-            <h2>Connect</h2>
-            <a class="contact-link" href="https://www.instagram.com/itz_soumyajit_2005" target="_blank">
-                <strong>Instagram</strong> @itz_soumyajit_2005 ↗
-            </a>
-            <a class="contact-link" href="https://www.facebook.com/share/18SCDVYxc4/" target="_blank">
-                <strong>Facebook</strong> Soumyajit Mukherjee ↗
-            </a>
-            <a class="contact-link" href="mailto:your-soumyajitm014@gmail.com">
-                <strong>Email</strong> your-soumyajitm014@gmail.com ✉
-            </a>
-            <p style="margin: 15px 0 0 12px; font-size: 0.95rem; color: #475569;"><strong>Location:</strong> Karimpur, Nadia, West Bengal, India</p>
-        </div>
-
-        <!-- Message Me Contact Form (Perfected Layout matching screenshot) -->
         <div id="contact" class="card" style="background: rgba(17, 24, 39, 0.7);">
-            <h2 style="color: #38bdf8; margin-bottom: 5px;">Message Me</h2>
-            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0; margin-bottom: 25px;">Fill out the form below and I'll get back to you as soon as possible.</p>
+            <h2>Message Me</h2>
+            <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 25px;">Fill out the form below and I'll get back to you.</p>
             
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-input" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" class="form-input" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="5" class="form-input" placeholder="Your Message" style="resize: none;" required></textarea>
+                <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Your Email" required></div>
+                <div class="form-group"><input type="text" name="subject" class="form-input" placeholder="Subject" required></div>
+                <div class="form-group"><textarea name="message" rows="5" class="form-input" placeholder="Your Message" style="resize: none;" required></textarea></div>
                 <button type="submit" class="submit-btn">Send Message &nbsp; ✈</button>
-</form>
-            </div>
-            
+            </form>
+        </div>
+
+    </div>
+
+    <footer>&copy; 2026 Soumyajit Mukherjee</footer>
+</body>
+</html>
